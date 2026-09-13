@@ -19,6 +19,13 @@ jobs:
         run: |
           git clone --recursive https://github.com/roothide/theos.git "$HOME/theos"
 
+      - name: Check project files
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Project files:"
+          ls -la
+
       - name: Build package
         run: |
           export THEOS="$HOME/theos"
